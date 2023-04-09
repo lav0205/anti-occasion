@@ -1,0 +1,117 @@
+<table>
+  <td class="side">
+    <main>
+      <aside>
+        <button id="close-btn">
+          <span class="material-icons">close</span>
+        </button>
+
+        <div class="sidebar">
+          <a href="/login/default">
+            <span class="material-icons">dashboard</span>
+            <h4>Dashboard</h4>
+          </a>
+          <a href="/articles">
+            <span class="material-icons" >newspaper</span>
+            <h4>Articles</h4>
+          </a>
+          <a href="/occasion" >
+            <span class="material-icons">event</span>
+            <h4>Occasions</h4>
+          </a>
+          <a href="/games">
+            <span class="material-icons">extension</span>
+            <h4>Games</h4>
+          </a>
+          <a href="/music">
+            <span class="material-icons">music_note</span>
+            <h4>Music</h4>
+          </a>
+          <a href="/wishlist" >
+            <span class="material-icons">favorite</span>
+            <h4>Wishlist</h4>
+          </a>
+          <a href="/bookings"  class="active">
+            <span class="material-icons">list_alt</span>
+            <h4>Bookings</h4>
+          </a>
+        </div>
+        <!-- END OF SIDEBAR-->
+
+        <div class="updates">
+          <span class="material-icons">update</span>
+          <h4>Updates Available</h4>
+          <p>Security Updates</p>
+          <p>General Updates</p>
+          <a href="#">Update Now</a>
+        </div>
+      </aside>
+
+      </main>
+
+  </td>
+  <td>
+
+    <ng-container *ngIf="true">
+      <mat-card class="card-table">
+        <div class="card-product">
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Occasion Name</th>
+                <th>Occasion Image</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Date</th>
+                <th>Payment</th>
+                <th>Cancel</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>1</td>
+              <td>Birthday</td>
+              <td><img src="https://pnrstatusirctc.in/wp-content/uploads/2017/02/Cafe-by-the-Beach-2.jpg"  alt=""></td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.Rerum recusandae, temporibus similique accusantium illo sequi minus dolorem provident nulla mollitia?</td>
+              <td>10000</td>
+              <td>05-08-2023</td>
+              <td>Paid</td>
+              <td><button class="btn"><mat-icon>delete</mat-icon></button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Holi</td>
+              <td><img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/03/02/10/holi-10.jpg" alt=""></td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit necessitatibus ducimus, quos ullam ut ipsum iure consequuntur.</td>
+              <td>2000</td>
+              <td>07-03-2023</td>
+              <td>Paid</td>
+              <td><button class="btn"><mat-icon>delete</mat-icon></button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Hindu Destination Wedding</td>
+              <td><img src="https://symphonyevents.com.au/wp-content/uploads/2023/02/JKHinduWeddingHighRes-643-2-1-1024x683.jpg" alt=""></td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda itaque magni doloribus, sit dicta magnam officia quasi.</td>
+              <td>1600000</td>
+              <td>01-11-2023</td>
+              <td>Paid</td>
+              <td><button class="btn"><mat-icon>delete</mat-icon></button></td>
+            </tr>
+          </table>
+        </div>
+      </mat-card>
+
+    </ng-container>
+
+    <ng-container *ngIf="false">
+      <div class="center">
+        <h4>Your Booking's is Empty!</h4>
+        <h6>Add Booking's now!</h6>
+        <button routerLink="/occasion">BOOK NOW</button>
+      </div>
+    </ng-container>
+
+
+  </td>
+</table>

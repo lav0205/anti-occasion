@@ -1,0 +1,226 @@
+
+
+section {
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    display: -webkit-flex;
+    margin-top: 5%;
+}
+
+section .imgBox {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+section .imgBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 85%;
+    background: linear-gradient(225deg, #45f3ff, #050135);
+    z-index: 1;
+    mix-blend-mode: hard-light;
+}
+
+section .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 85%;
+    object-fit: fill;
+}
+
+section .main-contentBox {
+    background: linear-gradient(225deg, #050135, #45f3ff);
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+section .contentBox {
+    position: relative;
+    justify-content: right;
+    margin-left: 50%;
+    align-items: center;
+    width: 380px;
+    height: 545px;
+    border-radius: 8px;
+    background: #1c1c1c;
+    z-index: 1;
+    overflow: hidden;
+}
+section .contentBox::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 545px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+    animation: animate 6s linear infinite;
+}
+section .contentBox::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 545px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+section .form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+section .form h2{
+    color: #45f3ff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+section .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 15px;
+}
+section .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+section .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #45f3ff;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+    height: 44px;
+}
+.links
+{
+    display: flex;
+    justify-content: space-between;
+}
+.links a
+{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+.links a:hover,
+.links a:nth-child(2)
+{
+    color: #45f3ff;
+}
+input[type="submit"]
+{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+input[type="submit"]:active
+{
+    opacity: 0.8;
+}
+section .main-example-card {
+    width: 60%;
+    height: 90%;
+    padding: 40px;
+    background: linear-gradient(225deg, #28282c, #28282b);
+    margin: 50px;
+}
+
+.example-margin {
+    margin: 0 12px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 345px;
+    letter-spacing: 1px;
+    display: inline-block;
+    height: 102%;
+    padding: 25px;
+    background: transparent;
+}
+
+.example-full-width {
+    width: 100%;
+    margin-top: 1%;
+    padding-top: 2px;
+    position: relative;
+}
+
+
+
+

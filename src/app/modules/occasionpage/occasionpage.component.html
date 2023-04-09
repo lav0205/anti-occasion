@@ -1,0 +1,129 @@
+<table>
+  <td class="side">
+    <main>
+      <aside>
+        <button id="close-btn">
+          <span class="material-icons">close</span>
+        </button>
+
+        <div class="sidebar">
+          <a href="/login/default">
+            <span class="material-icons">dashboard</span>
+            <h4>Dashboard</h4>
+          </a>
+          <a href="/articles">
+            <span class="material-icons">newspaper</span>
+            <h4>Articles</h4>
+          </a>
+          <a href="/occasion" class="active">
+            <span class="material-icons">event</span>
+            <h4>Occasions</h4>
+          </a>
+          <a href="/games">
+            <span class="material-icons">extension</span>
+            <h4>Games</h4>
+          </a>
+          <a href="/music">
+            <span class="material-icons">music_note</span>
+            <h4>Music</h4>
+          </a>
+          <a href="/wishlist">
+            <span class="material-icons">favorite</span>
+            <h4>Wishlist</h4>
+          </a>
+          <a href="/bookings">
+            <span class="material-icons">list_alt</span>
+            <h4>Bookings</h4>
+          </a>
+        </div>
+        <!-- END OF SIDEBAR-->
+
+        <div class="updates">
+          <span class="material-icons">update</span>
+          <h4>Updates Available</h4>
+          <p>Security Updates</p>
+          <p>General Updates</p>
+          <a href="#">Update Now</a>
+        </div>
+      </aside>
+
+    </main>
+
+  </td>
+  <td class="section">
+    <div class="container">
+
+      <div class="container">
+        <div class="sub-container">
+          <mat-card class="example-card" *ngIf="religiousData">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">{{religiousData[0].religiousName}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{religiousData[0].religiousImg}}" width="100%" alt="">
+
+            <mat-card-content class="content">
+
+              <p>{{religiousData[0].religiousDetails}}</p>
+              <p>{{religiousData[0].religiousPrice | currency: 'INR'}}</p>
+              <br />
+            </mat-card-content>
+
+
+            <div class="date">
+              <h2>1. Date</h2>
+              <input type="date" value="">
+            </div>
+
+
+
+            <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+              <h3 data-testid>2.  Delivery Address</h3>
+
+              <div data-testid class="a-column a-span7">
+                <div class="displayAddressDiv">
+                  <ul class="displayAddressUL">
+                    <li class="displayAddressLI displayAddress FullName">
+                      <h2>Full Name</h2><input type="text">
+                    </li>
+
+                    <li class="displayAddressLI displayAddressAddressLine1">
+                      <h2>Address Line 1</h2><input type="text">
+                    </li>
+
+                    <li class="displayAddressLI displayAddressAddressLine2">
+                      <h2>Address Line 2</h2><input type="text">
+                    </li>
+
+                    <li class="displayAddressLI displayAddressCityStateOrRegionPostalCode">
+                      <h2>City State Or RegionPostalCode</h2><input type="text">
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment">
+              <h3 data-testid>  3.  Select a payment method</h3>
+
+              <mat-radio-group aria-label="Select an option" class="radio">
+                <mat-radio-button value="1" disabled>Pay with Debit/Credit/ATM Cards</mat-radio-button>
+                <mat-radio-button value="2" disabled>Net Banking</mat-radio-button>
+                <mat-radio-button value="3" disabled>Other UPI Apps</mat-radio-button>
+                <mat-radio-button color="primary" value="4">Cash On Check In</mat-radio-button>
+              </mat-radio-group>
+            </div>
+
+              <mat-card-actions>
+                <a class="btn" (click)="Booking()">Place your Booking's</a>
+              </mat-card-actions>
+
+          </mat-card>
+        </div>
+
+      </div>
+
+    </div>
+  </td>
+</table>

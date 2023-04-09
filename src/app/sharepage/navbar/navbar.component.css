@@ -1,0 +1,127 @@
+.light-theme{
+    --background-color: #f5f5f5;
+    --text-color: #1a1a1a;
+    --box-color: #fff;
+    --button-color: #fff;
+
+    --box-shadow: 0 15px 25px rgba(0,0,0,-2);
+  }
+
+  .dark-theme{
+    --background-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --box-color: #2b2b2b;
+    --button-color: #1a1a1a;
+  }
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgb(2, 2, 61);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+    flex-wrap: wrap;
+    padding-block: 15px;
+}
+
+.header .nav .example-button-row button{
+    color: black;
+}
+
+.header .img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 50px;
+}
+
+.header a{
+  margin-left: -55rem;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.header .navbar a:active{
+  color: green;
+}
+
+.header .navbar a:hover {
+  cursor: pointer;
+    color: #29d9d5;
+}
+
+.header .navbar .mainlogout a{
+  font-size: 1.7rem;
+    color: rgb(2, 2, 61);
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.header .navbar .mainlogout a:hover{
+  cursor: pointer;
+  color: #29d9d5;
+}
+
+.header .btn {
+    margin-top: 0;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.logo i {
+    color: #29d9d5;
+    padding-right: .5rem;
+}
+
+.toggle{
+    margin-left: 5rem;
+    color: white;
+}
+
+@media screen  and(max-width: 600px){
+  .a{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .a{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .toggle{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #toggler:checked ~ .a{
+    max-height: 100%;
+  }
+}

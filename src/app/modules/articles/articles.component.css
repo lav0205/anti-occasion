@@ -1,0 +1,594 @@
+/* Event Section */
+
+.side {
+  position: fixed;
+  margin-top: 5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  appearance: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: -1rem auto 30rem;
+  gap: 2rem;
+  width: 96%;
+  margin: 1rem auto 4rem;
+  margin-right: 100%;
+  margin-top: 2rem;
+  padding-right: 50%;
+}
+
+main aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 88vh;
+}
+
+/* will be shown only on mobile and tablets*/
+
+main aside button#close-btn {
+  display: none;
+}
+
+main aside .sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  height: 4.2rem;
+  color: var(--color-gray-light);
+  position: relative;
+}
+
+main aside .sidebar a span {
+  font-size: 1.7rem;
+  margin-left: 3rem;
+  transition: all 300ms ease;
+}
+
+main aside .sidebar a.active {
+  background: var(--color-white);
+  color: var(--color-primary);
+  padding-right: 5%;
+  width: 110%;
+}
+
+main aside .sidebar a.active:before {
+  content: '';
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  background: var(--color-primary);
+}
+
+main aside .sidebar a:hover {
+  color: var(--color-primary);
+  width: 110%;
+}
+
+main aside .sidebar a:hover span {
+  margin-left: 2rem;
+  width: 110%;
+}
+
+main aside .sidebar h4 {
+  font-weight: 500;
+}
+
+/* UPDATES */
+
+main aside .updates {
+  background: var(--color-white);
+  border-radius: var(--border-radius-1);
+  text-align: center;
+  padding: var(--card-padding);
+}
+
+main aside .updates span {
+  font-size: 2.8rem;
+}
+
+main aside .updates h4 {
+  margin: 1rem 0;
+}
+
+main aside .updates a {
+  display: block;
+  width: 100%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-1);
+  padding: 0.8rem 0;
+  margin-top: 2rem;
+  transition: all 300ms ease;
+}
+
+main aside .updates a:hover {
+  box-shadow: 0 1rem 2rem var(--color-primary-light);
+}
+
+/* Media Queries for Tablets */
+
+@media screen and (max-width: 1024px) {
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  main aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: var(--color-white);
+    width: 22rem;
+    height: 100vh;
+    box-shadow: 2rem 0 2rem var(--color-primary-light);
+    display: none;
+    animation: showSidebar 500ms ease forwards;
+  }
+
+
+  @keyframes showSidebar {
+    to {
+      left: 0;
+    }
+  }
+
+  main aside button#close-btn {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: inherit;
+    background: transparent;
+    color: var(--color-dark);
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  main aside .sidebar {
+    margin-top: 4rem;
+  }
+
+  main aside .updates {
+    display: none;
+  }
+}
+
+
+.section {
+  margin: 2px;
+  margin-left: 23rem;
+  background: rgb(250, 246, 246);
+}
+
+.event {
+  margin: 30px !important;
+  margin-left: 10px !important;
+  padding-right: 40px;
+}
+
+.header {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-top: 3rem;
+  color: rgb(2, 2, 61);
+  text-shadow: 5px;
+}
+
+.sub-container {
+  width: 800px;
+  height: 680px;
+  background-color: transparent;
+  justify-content: center !important;
+  margin-bottom: 20% !important;
+  margin-right: 10rem !important;
+  border-radius: 50px;
+}
+
+.example-card {
+  max-width: 1300px;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+  background: rgb(15, 15, 15);
+  border-radius: 1rem;
+  transition: all 300ms ease;
+}
+
+.example-card:hover {
+  box-shadow: 0 0 2.5rem var(--color-dark);
+  cursor: pointer;
+}
+
+.event-content {
+  box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.3), inset 10px 10px 10px -10px rgba(0, 0, 0, 0.5);
+  padding: 5%;
+  cursor: pointer;
+  background: rgb(226, 220, 220) !important;
+  margin-top: -120px !important;
+  margin-left: 120px !important;
+  justify-content: center !important;
+  position: relative;
+  transition: 0.6s;
+  transition: all 300ms ease;
+  width: 750px;
+}
+
+.event-content:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 2.5rem var(--color-white);
+  cursor: pointer;
+}
+
+.event-content h4 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.event-content span {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.event-content button {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px !important;
+  background: black;
+  color: wheat;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: all 300ms ease;
+}
+
+.event-content button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1.5rem var(--color-dark);
+  cursor: pointer;
+}
+
+.event img {
+  margin: 5rem;
+  margin-left: 2rem;
+  width: 90%;
+  display: flex;
+  min-height: 70vh;
+  min-width: 135vh;
+  border-radius: 1rem;
+  transition: all 300ms ease;
+}
+
+
+
+.event img:hover {
+  box-shadow: 0 0 1.5rem var(--color-light);
+  cursor: pointer;
+}
+
+.event .col-sm-5 {
+  margin-bottom: 100px !important;
+}
+
+
+.card{
+  width: 1000px;
+  margin-bottom: 5rem;
+}
+
+.card-content{
+  position: relative;
+  padding: 15rem 5rem;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+  min-height: 530px;
+}
+
+.card:hover .card-content{
+  transform: rotateY(180deg);
+}
+
+.card-front-1, .card-back-1{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-front-1,.card-back-1{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: black;
+}
+
+.card-front-1{
+  background-image: url(https://www.kandayaresort.com/wp-content/uploads/2016/11/gallery-wedding-1-815x500.jpg);
+  background-color: rgba(255, 163, 42, 0.2);
+  align-items: center;
+}
+
+.card-back-1{
+  background-image: url(https://www.generationsresortshotels.com/img/generations/occasions/section02-wedding-HiRes.jpg);
+  transform: rotateY(180deg);
+  gap: 0.5rem;
+}
+
+.card-front-1::before,.card-back-1::before{
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 3px solid white;
+  transform: translateZ(2rem);
+}
+
+.title{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  line-height: 120%;
+  transform: translateZ(4.4rem);
+}
+
+.sub-title{
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateZ(3rem);
+}
+
+.card-back-1 .occasion-description,.card-back-1 .date, .card-back-1 .back-title, .card-front-1 .sub-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family:'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateZ(3rem);
+  color: black;
+}
+
+
+
+.card-front-2, .card-back-2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-front-2,.card-back-2{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  font-size: 1rem;
+  color: white;
+}
+
+.card-front-2{
+  background-image: url(https://1.bp.blogspot.com/-qCiu6_M2xIs/UHrSHdFZ31I/AAAAAAAABUo/RMh6nTVrWC8/s1600/4.jpg);
+  background-color: rgba(255, 163, 42, 0.1);
+  align-items: center;
+}
+
+.card-back-2{
+  background-image: url(http://d.ibtimes.co.uk/en/full/1460471/mid-autumn-festival.jpg?w=1180);
+  transform: rotateY(180deg);
+  gap: 0.5rem;
+}
+
+.card-front-2::before,.card-back-2::before{
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 3px solid white;
+  transform: translateZ(2rem);
+}
+
+.card-back-2 .occasion-description,.card-back-2 .date, .card-back-2 .back-title, .card-front-2 .sub-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family:'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateZ(3rem);
+  color: whitesmoke;
+}
+
+
+
+
+.card-front-3, .card-back-3{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-front-3,.card-back-3{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  font-size: 1rem;
+  color: white;
+}
+
+.card-front-3{
+  background-image: url(https://i.pinimg.com/736x/9a/9c/71/9a9c712abbce93e707a3e9bd14a1a2df.jpg);
+  background-color: rgba(255, 163, 42, 0.1);
+  align-items: center;
+}
+
+.card-back-3{
+  background-image: url(https://cache.careers360.mobi/media/article_images/2023/1/7/birthday-party-essay.jpg);
+  transform: rotateY(180deg);
+  gap: 0.5rem;
+}
+
+.card-front-3::before,.card-back-3::before{
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 3px solid white;
+  transform: translateZ(2rem);
+}
+
+.card-back-3 .occasion-description,.card-back-3 .date, .card-back-3 .back-title, .card-front-3 .sub-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family:'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateZ(3rem);
+  color: white;
+}
+
+
+
+
+.card-front-4, .card-back-4{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-front-4,.card-back-4{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  font-size: 1rem;
+  color: white;
+}
+
+.card-front-4{
+  background-image: url(https://www.gracekennedyevents.com/wp-content/uploads/2020/04/5.jpg);
+  background-color: rgba(255, 163, 42, 0.1);
+  align-items: center;
+}
+
+.card-back-4{
+  background-image: url(http://alexakritisevents.com/wp-content/uploads/sites/9973/2021/11/The-Vinoy-Indoor-Wedding-Reception-Venue.jpg);
+  transform: rotateY(180deg);
+  gap: 0.5rem;
+}
+
+.card-front-4::before,.card-back-4::before{
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 3px solid white;
+  transform: translateZ(2rem);
+}
+
+.card-back-4 .occasion-description,.card-back-4 .date, .card-back-4 .back-title, .card-front-4 .sub-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family:'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateZ(3rem);
+  color: whitesmoke;
+}
+
+
+
+
+.card-front-5, .card-back-5{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-front-5,.card-back-5{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  font-size: 1rem;
+  color: white;
+}
+
+.card-front-5{
+  background-image: url(https://assets.thehansindia.com/h-upload/2022/08/18/1308422-janm.webp);
+  background-color: rgba(255, 163, 42, 0.1);
+  align-items: center;
+}
+
+.card-back-5{
+  background-image: url(https://images.woodenstreet.de/image/data/juhi/blog%20images/18%20August%202022/krishna-janmashtami-10.jpg);
+  transform: rotateY(180deg);
+  gap: 0.5rem;
+}
+
+.card-front-5::before,.card-back-5::before{
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 3px solid white;
+  transform: translateZ(2rem);
+}
+
+.card-back-5 .occasion-description,.card-back-5 .date, .card-back-5 .back-title, .card-front-5 .sub-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family:'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateZ(3rem);
+  color: whitesmoke;
+}
+

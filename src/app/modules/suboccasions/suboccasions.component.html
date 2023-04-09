@@ -1,0 +1,476 @@
+<table>
+  <td class="side">
+    <main>
+      <aside>
+        <button id="close-btn">
+          <span class="material-icons">close</span>
+        </button>
+
+        <div class="sidebar">
+          <a href="/login/default">
+            <span class="material-icons">dashboard</span>
+            <h4>Dashboard</h4>
+          </a>
+          <a href="/articles">
+            <span class="material-icons" >newspaper</span>
+            <h4>Articles</h4>
+          </a>
+          <a href="/occasion"  class="active">
+            <span class="material-icons">event</span>
+            <h4>Occasions</h4>
+          </a>
+          <a href="/games">
+            <span class="material-icons">extension</span>
+            <h4>Games</h4>
+          </a>
+          <a href="/music">
+            <span class="material-icons">music_note</span>
+            <h4>Music</h4>
+          </a>
+          <a href="/wishlist">
+            <span class="material-icons">favorite</span>
+            <h4>Wishlist</h4>
+          </a>
+          <a href="/bookings">
+            <span class="material-icons">list_alt</span>
+            <h4>Bookings</h4>
+          </a>
+        </div>
+        <!-- END OF SIDEBAR-->
+
+        <div class="updates">
+          <span class="material-icons">update</span>
+          <h4>Updates Available</h4>
+          <p>Security Updates</p>
+          <p>General Updates</p>
+          <a href="#">Update Now</a>
+        </div>
+      </aside>
+
+      </main>
+
+  </td>
+  <td>
+    <div class="container">
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Religious</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/e4.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a  class="btn" (click)="religious()">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Wedding's</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o1.webp">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a  class="btn" (click)="wedding()">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Institutional</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o5.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Valentine</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o6.avif">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">National</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o7.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Cultural</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o8.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Sports</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o9.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Music & Dance</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o10.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Trade Fairs and Exhibitions</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o11.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Birthdays & Anniversaries</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o12.webp">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Social</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o13.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Literacy</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/014.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Film</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o14.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Fashion</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o15.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Art</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o16.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Food & Drinks</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o17.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Charity</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o18.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Outdoor</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o19.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Business</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o20.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Historical</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o21.webp">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title class="title">Science & Technology</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/img/Occasions/o22.jpg">
+          <mat-card-content class="content">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br />
+                  Ullam tempore deserunt consectetur dolore quisquam earum quod sequi quo tenetur itaque.
+                  <br />
+                  Sapiente rerum itaque pariatur dolore incidunt quia eligendi earum atque.
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+              <a routerLink="venues" class="btn">MORE</a>
+          </mat-card-actions>
+      </mat-card>
+  </div>
+  </td>
+</table>

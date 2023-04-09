@@ -1,0 +1,226 @@
+.side{
+  position: fixed;
+  margin-top: 5rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	appearance: none;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	padding-left: 5px;
+  padding-right: 5px;
+}
+
+main{
+	display: grid;
+	grid-template-columns: -1rem auto 30rem;
+	gap: 2rem;
+	width: 96%;
+	margin: 1rem auto 4rem;
+	margin-right: 100%;
+  margin-top: 2rem;
+	padding-right: 50%;
+}
+
+main aside{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 88vh;
+}
+
+/* will be shown only on mobile and tablets*/
+
+main aside button#close-btn{
+	display: none;
+}
+
+main aside .sidebar a{
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	height: 4.2rem;
+	color: var(--color-gray-light);
+	position: relative;
+}
+
+main aside .sidebar a span{
+	font-size: 1.7rem;
+	margin-left: 3rem;
+	transition: all 300ms ease;
+}
+
+main aside .sidebar a.active{
+	background: var(--color-white);
+	color: var(--color-primary);
+	padding-right: 5%;
+	width: 110%;
+}
+
+main aside .sidebar a.active:before{
+	content: '';
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	background: var(--color-primary);
+}
+
+main aside .sidebar a:hover{
+	color: var(--color-primary);
+	width: 110%;
+}
+
+main aside .sidebar a:hover span{
+	margin-left: 2rem;
+	width: 110%;
+}
+
+main aside .sidebar h4{
+	font-weight: 500;
+}
+
+/* UPDATES */
+
+main aside .updates{
+	background: var(--color-white);
+	border-radius: var(--border-radius-1);
+	text-align: center;
+	padding: var(--card-padding);
+}
+
+main aside .updates span{
+	font-size: 2.8rem;
+}
+
+main aside .updates h4{
+	margin: 1rem 0;
+}
+
+main aside .updates a{
+	display: block;
+	width: 100%;
+	background: var(--color-primary);
+	color: var(--color-white);
+	border-radius: var(--border-radius-1);
+	padding: 0.8rem 0;
+	margin-top: 2rem;
+	transition: all 300ms ease;
+}
+
+main aside .updates a:hover{
+	box-shadow: 0 1rem 2rem var(--color-primary-light);
+}
+
+/* Media Queries for Tablets */
+
+@media screen and (max-width: 1024px){
+
+	main{
+		grid-template-columns: 1fr;
+	}
+
+	main aside{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		background: var(--color-white);
+		width: 22rem;
+		height: 100vh;
+		box-shadow: 2rem 0 2rem var(--color-primary-light);
+		display: none;
+		animation: showSidebar 500ms ease forwards;
+	}
+
+
+@keyframes showSidebar{
+	to {
+		left: 0;
+	}
+}
+
+	main aside button#close-btn{
+		display: inline-block;
+		width: 3rem;
+		height: 3rem;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: inherit;
+		background: transparent;
+		color: var(--color-dark);
+	}
+
+	button:hover{
+		cursor: pointer;
+	}
+
+	main aside .sidebar{
+		margin-top: 4rem;
+	}
+
+	main aside .updates{
+		display: none;
+	}
+}
+
+.game1{
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+  margin-left: 45rem;
+  margin-top: 8rem;
+}
+
+.game1 h1{
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  text-shadow: 2px 2px #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.game1 button{
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background: var(--color-dark);
+  cursor: pointer;
+  text-decoration: none;
+    transition: 0.6s;
+    transition: all 300ms ease;
+}
+
+.game1 button:hover{
+  transform: scale(1.1);
+    box-shadow: 0 0 1.5rem var(--color-dark);
+	cursor: pointer;
+}
+
+.game1 img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}

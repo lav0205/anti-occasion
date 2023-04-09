@@ -1,0 +1,433 @@
+.dark-theme{
+	--color-white: #131316;
+	--color-light: #23232a;
+	--color-dark: #ddd;
+	--color-gray-dark: #adacb5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	appearance: none;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+
+
+html {
+	font-size: 12px;
+}
+
+body {
+	background: var(--color-light);
+	font-family: poppins, sans-serif;
+	min-height: 100vh;
+	color: var(--color-dark);
+}
+
+img {
+	width: 100%;
+}
+
+h1 {
+	font-size: 2.2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+h5 {
+	font-size: 0.86rem;
+	font-weight: 500;
+}
+
+h6 {
+	font-size: 0.76rem;
+}
+
+p {
+	font-size: 0.86rem;
+	color: var(--color-gray-dark);
+}
+
+small {
+	font-weight: 300;
+	font-size: 0.77rem;
+}
+
+.text-muted {
+	color: var(--color-gray-light);
+}
+
+.primary {
+	color: var(--color-primary);
+}
+
+.danger {
+	color: var(--color-danger);
+}
+
+.success {
+	color: var(--color-success);
+}
+
+.purple {
+	color: var(--color-purple);
+}
+
+.bg-primary {
+	background: var(--color-primary);
+	box-shadow: 0 0.8rem 0.8rem var(--color-primary-light);
+}
+
+.bg-danger {
+	background: var(--color-danger);
+	box-shadow: 0 0.8rem 0.8rem var(--color-danger-light);
+}
+
+.bg-success {
+	background: var(--color-success);
+	box-shadow: 0 0.8rem 0.8rem var(--color-success-light);
+}
+
+.bg-purple {
+	background: var(--color-purple);
+	box-shadow: 0 0.8rem 0.8rem var(--color-purple-light);
+}
+
+.bg-dark {
+	background: #27282f;
+	box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+
+/* MIDDLE */
+
+main .monthly-report{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	justify-content: space-between;
+	margin-top: 2rem;
+	margin-left: 7rem;
+}
+
+main .monthly-report h1,h3{
+	font-weight: 700;
+	font-size: 1.8rem;
+}
+
+/* FAST PAYMENT */
+
+main .fast-payment{
+	width: 100%;
+	margin-top: 5rem;
+	margin-left: 7rem;
+	display: flex;
+	align-self: center;
+	gap: 2rem;
+}
+
+main .fast-payment .badges{
+	display: flex;
+	gap: 1rem;
+	align-self: center;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+
+main .fast-payment .badge span{
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	align-items: center;
+}
+
+main .fast-payment .badge{
+	padding: 0.5rem var(--card-padding);
+	background: var(--color-primary-light);
+	border-radius: var(--border-radius-2);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	transition: all 300ms ease;
+	height: 40%;
+}
+
+main .fast-payment .badge:hover{
+	box-shadow: 0 0 1.5rem var(--color-primary);
+	cursor: pointer;
+}
+
+main .fast-payment .badge:first-child span{
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	height: fit-content;
+	font-size: 1.5rem;
+}
+
+main .fast-payment .badge div{
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	color: black;
+}
+
+/* CANVAS */
+
+canvas#chart{
+	background: var(--color-white);
+	max-width: 100%;
+	margin-top: 2rem;
+	margin-left: 2rem;
+	border-radius: var(--card-border-radius);
+	padding: var(--card-padding);
+}
+
+/* Recent Occasions */
+
+main .investments{
+	background: rgba(71, 7, 234, 0.5);
+	border-radius: var(--card-border-radius);
+  min-width: 100rem;
+	margin-top: 6rem;
+	margin-left: 10rem;
+	margin-right: 2rem;
+}
+
+main .investments img{
+	width: 2.4rem;
+}
+
+main .investments .header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  color: #131316;
+	padding: var(--card-padding);
+	padding-bottom: 0;
+}
+
+main.investments .header a{
+	display: flex;
+	align-items: center;
+	color: var(--color-dark);
+
+}
+
+main .investments .investment{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: var(--card-padding);
+	border-radius: 1px solid var(--color-light);
+  cursor: pointer;
+}
+
+main .investments .investment:last-child{
+	border: none;
+}
+
+main .investments .investment:hover{
+	background: var(--transparent-white);
+}
+
+/* Recent Transaction */
+
+main .recent-transactions{
+	margin-top: 5rem;
+	margin-left: 10rem;
+	margin-right: 2rem;
+  margin-bottom: 5rem;
+}
+
+main .recent-transactions img{
+	width: 2.2rem;
+}
+
+main .recent-transactions .header{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+main .recent-transactions .header a{
+	display: flex;
+	align-items: center;
+	color: var(--color-primary);
+}
+
+main .recent-transactions .transaction{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem var(--card-padding);
+	border-radius: var(--card-border-radius);
+	transition: all 300ms ease;
+}
+
+main .recent-transactions .transaction:hover{
+	background: rgba(71, 7, 234, 0.5);
+	cursor: pointer;
+}
+
+
+main .recent-transactions .transaction .service{
+	display: flex;
+	gap: 1rem;
+}
+
+
+main .recent-transactions .transaction .service .icon{
+	padding: var(--padding-2);
+	border-radius: var(--border-radius-1);
+	display: flex;
+	align-items: center;
+}
+
+
+main .recent-transactions .card-details{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+
+main .recent-transactions .card-details .card{
+	display: flex;
+	width: 4.6rem;
+	height: 3rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--border-radius-2);
+}
+
+/* Media Queries for Tablets */
+
+@media screen and (max-width: 1024px){
+	nav .search-bar{
+		display: none;
+	}
+
+	nav .profile-area{
+		gap: 2rem;
+	}
+
+	nav .profile-area button#menu-btn{
+		display: inline;
+		background: transparent;
+		color: var(--color-dark);
+	}
+
+	main{
+		grid-template-columns: 1fr;
+	}
+
+	main aside{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		background: var(--color-white);
+		width: 22rem;
+		height: 100vh;
+		box-shadow: 2rem 0 2rem var(--color-primary-light);
+		display: none;
+		animation: showSidebar 500ms ease forwards;
+	}
+
+
+@keyframes showSidebar{
+	to {
+		left: 0;
+	}
+}
+
+	main aside button#close-btn{
+		display: inline-block;
+		width: 3rem;
+		height: 3rem;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: inherit;
+		background: transparent;
+		color: var(--color-dark);
+	}
+
+	button:hover{
+		cursor: pointer;
+	}
+
+	main aside .sidebar{
+		margin-top: 4rem;
+	}
+
+	main aside .updates{
+		display: none;
+	}
+
+	main section .middle .cards{
+		grid-template-columns: 1fr 1fr;
+	}
+
+	main canvas{
+		margin: 3rem 0 1rem;
+	}
+
+	main section .right .recent-transactions{
+		margin-top: 3rem;
+	}
+}
+
+/*mobile use */
+@media screen and (max-width: 600px){
+	nav{
+		margin-top: 25%;
+		width: 150px;
+		background: var(--color-white);
+	}
+	nav .profile-area{
+		gap: 2.6rem;
+	}
+
+	nav .profile h5, nav .profile span{
+		display: none;
+	}
+
+	main section .middle .cards{
+		grid-template-columns: 1fr;
+	}
+
+	main section .middle .fast-payment{
+		flex-direction: column;
+		align-items: flex-start;
+		margin-top: 3rem;
+		gap: 1.4rem;
+	}
+
+	main section .right .investments{
+		margin-top: 3rem;
+		width: 150px;
+	}
+
+	main section .right .recent-transactions{
+		margin-top: 3rem;
+		width: 150px;
+	}
+
+}

@@ -1,0 +1,544 @@
+.side{
+  position: fixed;
+  margin-top: 5rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	appearance: none;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	padding-left: 5px;
+  padding-right: 5px;
+}
+
+main{
+	display: grid;
+	grid-template-columns: -1rem auto 30rem;
+	gap: 2rem;
+	width: 96%;
+	margin: 1rem auto 4rem;
+	margin-right: 100%;
+  margin-top: 2rem;
+	padding-right: 50%;
+}
+
+main aside{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 88vh;
+}
+
+/* will be shown only on mobile and tablets*/
+
+main aside button#close-btn{
+	display: none;
+}
+
+main aside .sidebar a{
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	height: 4.2rem;
+	color: var(--color-gray-light);
+	position: relative;
+}
+
+main aside .sidebar a span{
+	font-size: 1.7rem;
+	margin-left: 3rem;
+	transition: all 300ms ease;
+}
+
+main aside .sidebar a.active{
+	background: var(--color-white);
+	color: var(--color-primary);
+	padding-right: 5%;
+	width: 110%;
+}
+
+main aside .sidebar a.active:before{
+	content: '';
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	background: var(--color-primary);
+}
+
+main aside .sidebar a:hover{
+	color: var(--color-primary);
+	width: 110%;
+}
+
+main aside .sidebar a:hover span{
+	margin-left: 2rem;
+	width: 110%;
+}
+
+main aside .sidebar h4{
+	font-weight: 500;
+}
+
+/* UPDATES */
+
+main aside .updates{
+	background: var(--color-white);
+	border-radius: var(--border-radius-1);
+	text-align: center;
+	padding: var(--card-padding);
+}
+
+main aside .updates span{
+	font-size: 2.8rem;
+}
+
+main aside .updates h4{
+	margin: 1rem 0;
+}
+
+main aside .updates a{
+	display: block;
+	width: 100%;
+	background: var(--color-primary);
+	color: var(--color-white);
+	border-radius: var(--border-radius-1);
+	padding: 0.8rem 0;
+	margin-top: 2rem;
+	transition: all 300ms ease;
+}
+
+main aside .updates a:hover{
+	box-shadow: 0 1rem 2rem var(--color-primary-light);
+}
+
+/* Media Queries for Tablets */
+
+@media screen and (max-width: 1024px){
+
+	main{
+		grid-template-columns: 1fr;
+	}
+
+	main aside{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		background: var(--color-white);
+		width: 22rem;
+		height: 100vh;
+		box-shadow: 2rem 0 2rem var(--color-primary-light);
+		display: none;
+		animation: showSidebar 500ms ease forwards;
+	}
+
+
+@keyframes showSidebar{
+	to {
+		left: 0;
+	}
+}
+
+	main aside button#close-btn{
+		display: inline-block;
+		width: 3rem;
+		height: 3rem;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: inherit;
+		background: transparent;
+		color: var(--color-dark);
+	}
+
+	button:hover{
+		cursor: pointer;
+	}
+
+	main aside .sidebar{
+		margin-top: 4rem;
+	}
+
+	main aside .updates{
+		display: none;
+	}
+}
+
+.header{
+  width: 85%;
+  height: 95%;
+  border: 1px solid #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header .menu-side, .song-side{
+  width: 25%;
+  height: 90%;
+  border: 1px solid #fff;
+  background: #111727;
+  box-shadow: 5px 0px 2px #090f1f;
+}
+
+.header .song-side{
+  width: 75%;
+  background: #0b1320;
+}
+
+.header .master-play{
+  width: 100%;
+  height: 10%;
+  border: 1px solid #fff;
+  box-shadow: 5px 3px 8px #090f1f;
+}
+
+.header .menu-side h1{
+  font-size: 20px;
+  margin: 15px 0px 0px 20px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+i {
+	cursor: pointer;
+}
+
+.player {
+	overflow: hidden;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+	position: relative;
+	width: 1100px;
+	height: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+  margin-left: 25rem;
+  margin-top: 6rem;
+}
+.cover {
+  position: absolute;
+  z-index: 1;
+  width: 1100px;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+  url(http://static.stereogum.com/blogs.dir/2/files/2011/12/Adele-21.jpg) center;
+  background-size: cover;
+}
+
+
+
+nav {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 3;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+
+}
+
+.left {
+  display: flex;
+}
+
+.left i {
+  cursor: pointer;
+  color: white;
+}
+
+.left h6 {
+  margin: 0;
+  padding-left: 20px;
+  color: white;
+  font-size: 18px;
+  line-height: 1.38;
+}
+
+.right {
+  display: flex;
+
+
+}
+
+.right i {
+  cursor: pointer;
+  color: white;
+}
+
+.right .search {
+  padding-right: 10px;
+}
+
+.player-ui {
+  position: relative;
+  z-index: 3;
+  margin-top: 10rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.title h3 {
+  margin: 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.small {
+  padding: 15px 35px 0px 35px;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.small p, i {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+}
+
+.small p {
+  color: #ddd;
+}
+
+.small i {
+  font-size: 16px;
+}
+
+.progress {
+    position: relative;
+    height: 2px;
+    margin: 30px 20px 0px 20px;
+    background: rgba(255, 255, 255, 0.3);
+
+
+  }
+
+  .played {
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    background: var(--color-primary);
+
+
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    margin-left: 52px;
+    margin-top: -4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  }
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 50px 0px 50px;
+
+
+}
+
+.controls i {
+  color: white;
+  font-size: 32px;
+}
+
+.btn {
+  margin-left: auto;
+  margin-right: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 4;
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary-light);
+  border-radius: 50%;
+
+}
+
+i {
+  font-size: 28px;
+  color: white;
+}
+
+.music {
+  padding: 10px 20px 0px 20px;
+  background: #1A1B1E;
+  margin-top: 6rem;
+  margin-left: 25rem;
+  width: 180%;
+
+}
+
+.song-1, .song-2, .song-3, .song-4 {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255 , 255, 255, 0.2);
+
+
+
+
+
+
+}
+
+.info {
+  display: flex;
+  align-items: center;
+
+
+
+
+}
+
+.img {
+  width: 60px;
+  height: 60px;
+  background: red;
+  margin-right: 10px;
+}
+
+.img.first {
+  background: url(https://tse1.mm.bing.net/th?id=OIP.6KU55OBho27t-g-7wYWG3gHaEK&pid=Api&rs=1&c=1&qlt=95&w=217&h=122) center center;
+  background-size: cover;
+}
+
+.img.second {
+  background: url(https://upload.wikimedia.org/wikipedia/en/d/df/RedHotChiliPeppersCalifornication.jpg) center center;
+  background-size: cover;
+}
+
+.img.third {
+  background: url(http://images.rapgenius.com/59fc635f7dbe6b5cd1e07e5e605c96b5.640x640x1.jpg) center center;
+  background-size: cover;
+}
+
+.img.fourth{
+  background: url(https://tse2.mm.bing.net/th?id=OIP.rBREMsEu2ZvQkUaY3Nb7DwHaHa&pid=Api&P=0) center center;
+  background-size: cover;
+}
+
+.img.five {
+  background: url(https://static.billboard.com/files/media/dua-lipa-aria-awards-2019-uu-billboard-1548-1024x677.jpg) center center;
+  background-size: cover;
+}
+
+.img.six {
+  background: url(https://upload.wikimedia.org/wikipedia/en/0/0d/Justin_Bieber_-_Anyone.png) center center;
+  background-size: cover;
+}
+
+.img.seven {
+  background: url(https://upload.wikimedia.org/wikipedia/en/b/b0/Glass_Animals_-_Heat_Waves.png) center center;
+  background-size: cover;
+}
+
+.img.eight {
+  background: url(https://upload.wikimedia.org/wikipedia/en/9/98/The_Kid_Laroi_-_Without_You_%28Remix%29.png) center center;
+  background-size: cover;
+}
+
+.img.nine {
+  background: url(https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/2e/0b/c0/2e0bc070-112f-a827-6ad8-6bc64f7caaff/840214460180.png/1200x1200bf-60.jpg) center center;
+  background-size: cover;
+}
+
+.img.ten {
+  background: url(https://wallpapercave.com/wp/wp5453947.jpg) center center;
+  background-size: cover;
+}
+
+.img.a {
+  background: url(https://live.staticflickr.com/1903/44921557491_0044197ff4_b.jpg) center center;
+  background-size: cover;
+}
+
+.img.b {
+  background: url(https://i.ytimg.com/vi/12O8UDfqfLY/maxresdefault.jpg) center center;
+  background-size: cover;
+}
+
+.img.c {
+  background: url(https://i.ytimg.com/vi/s-EhVaqK1V0/maxresdefault.jpg) center center;
+  background-size: cover;
+}
+
+.img.d {
+  background: url(https://i.ytimg.com/vi/wGta7CqQvnA/maxresdefault.jpg) center center;
+  background-size: cover;
+}
+
+.img.e {
+  background: url(https://i.ytimg.com/vi/_4K_OLUHMJo/maxresdefault.jpg) center center;
+  background-size: cover;
+}
+
+.img.f {
+  background: url(https://www.lyricsbogie.com/wp-content/uploads/2022/10/maan-meri-jaan-lyrics.jpg) center center;
+  background-size: cover;
+}
+
+.img.g {
+  background: url(https://i.ytimg.com/vi/a5zpDuoH_k0/maxresdefault.jpg) center center;
+  background-size: cover;
+}
+
+.img.h {
+  background: url(https://i.ytimg.com/vi/pDWS7Efpvxw/maxresdefault.jpg) center center;
+  background-size: cover;
+}
+
+.titles h5, p {
+    margin: 0;
+    color: white;
+  }
+
+ .titles h5 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 7px;
+  }
+
+ .titles p {
+    font-size: 13px;
+    color: #929292;
+  }
+
+
+.state .playing i {
+    color: var(--color-primary);
+  }
+
+
+.state i {
+  color: #ddd;
+}
